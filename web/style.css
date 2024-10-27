@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+:root {
+
+    /* color palette: https://colorhunt.co/palette/02152603346e6eacdae2e2b6  */
+
+    --custom-primary-color: #021526;
+    --custom-secondary-color: #03346E;
+    --primary-text-color: #6EACDA;
+    --tertiary-text-color: #DAA520;
+    --default-text-color: #E2E2B6;
+}
+
+.primary-background-color {
+    background-color: var(--custom-primary-color) !important;
+}
+
+.secondary-background-color {
+    background-color: var(--custom-secondary-color) !important;
+}
+
+.primary-text-color {
+    color: var(--primary-text-color) !important;
+}
+
+.tertiary-text-color {
+    color: var(--tertiary-text-color) !important;
+}
+
+.default-text-color {
+    color: var(--default-text-color) !important;
+}
+
+.secondary-text-color {
+    color: var(--custom-secondary-color) !important;
+}
+
+.title-text-color {
+    color: var(--default-text-color) !important;
+}
+
+.default-border-color {
+    border-color: var(--default-text-color) !important;
+}
+
+.secondary-border-color {
+    border-color: var(--custom-secondary-color) !important;
+}
+
+.primary-border-color {
+    border-color: var(--primary-text-color) !important;
+}
+
+
+html, body {
+
+    font-family: "Maven Pro", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--default-text-color) !important;
+    background-color: var(--custom-secondary-color) !important;
+    text-decoration: none;
+    height: 100%;
+}
+
+#app {
+
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.custom-app-height {
+
+    height: calc(100% - 56px);
+}
+
+
+.users-list {
+
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-card {
+
+    display: flex;
+    align-items: center;
+    border: 1px solid #007090;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #eaebed;
+    color: #007090;
+}
+
+.user-nickname {
+
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
+
+.user-stats, .user-status {
+
+    margin-right: 20px;
+}
+
+.user-stats div {
+
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.avatar {
+
+    aspect-ratio: 1 / 1;
+}
+
+.progress-bar-height {
+
+    height: 3em !important;
+}
+
+.form-floating > input:not(:focus):placeholder-shown + label {
+
+    color: var(--default-text-color);
+}
+
+.form-floating > input + label:after {
+
+    background-color: var(--custom-secondary-color) !important;
+}
+
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label {
+
+    color: var(--default-text-color) !important;
+}
+
+.nav-over:hover {
+
+    background-color: var(--custom-secondary-color);
+    color: var(--default-text-color) !important;
+}
+
+.form-control[type=file] {
+
+    background-color: var(--custom-secondary-color) !important;
+}
+
+input::file-selector-button {
+
+    background-color: var(--default-text-color) !important;
+    color: var(--custom-secondary-color) !important;
+}
+
+#ft-logo {
+
+    height: 26px;
+    width: 37px;
+}
+
+#account-card, #profile-picture {
+
+    border-color: var(--primary-text-color) !important;
+}
+
+.spinner {
+
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-color: currentColor;
+    border-style: solid;
+    border-radius: 99999px;
+    border-width: 2px;
+    border-left-color: transparent;
+    color: var(--primary-text-color);
+    opacity: 0;
+    animation-name: rotate, fadeIn;
+    animation-duration: 450ms, 600ms;
+    animation-timing-function: linear, ease;
+    animation-iteration-count: infinite, 1;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#password-rules {
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+#password-rules.show {
+
+    max-height: 200px;
+    opacity: 1;
+}
+
+.form-floating.position-relative {
+
+    position: relative;
+}
+
+
+@media screen and (max-width: 1500px) {
+
+    #account-card {
+
+        width: 75% !important;
+    }
+}
+
+#game-container {
+    width: 100%;
+    max-width: 60vw;
+    max-height: 60vh;
+    aspect-ratio: 16 / 9;
+    font-family: 'Orbitron', sans-serif;
+    border: 2px solid;
+    border-color: var(--tertiary-text-color);
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    outline: none;
+
+}
+
+#game-overlay {
+    z-index: 10;
+}
+
+#game-overlay h1 {
+    font-size: 1.8vw;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#start-text {
+    font-size: 1.2vw;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#countdown-text {
+    font-size: 3vw;
+}
+
+#hud, #player-left-name, #player-right-name {
+    font-size: 1.5vw;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 10;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+.custom-list-border {
+    border-left: var(--custom-secondary-color) 3px solid;
+}
+
+.appear-on-hover span {
+    opacity: 0;
+}
+
+.appear-on-hover:hover span {
+    transition: opacity .1s linear;
+    opacity: 100%;
+}
+
+.custom-input-border {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: var(--custom-secondary-color) 3px solid;
+
+}
+
+.custom-input-border:focus-visible {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: var(--custom-secondary-color) 3px solid !important;
+}
+
+.pong-check:checked + label {
+    font-weight: bold;
+    font-size: 120%;
+    color: var(--primary-text-color);
+}
+
+.pong-img-check:checked + label img {
+    border: var(--primary-text-color) 3px solid;
+    height: 2.7em;
+}
+
+.label-hover {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.label-hover:hover {
+    color: var(--primary-text-color);
+    transform: scale(1.1);
+}
+
+.color-set-logo {
+    width: auto;
+    height: 2.5em;
+    object-fit: cover;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.color-set-logo:hover {
+    transform: scale(1.1);
+}
+
+#score-dropdown {
+    font-size: 1.2rem;
+    padding: 0.5em;
+    text-align: center;
+}
+
+#score-dropdown:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+
+
+h5 {
+    font-size: 1.4rem;
+    color: var(--tertiary-text-color);
+    margin-bottom: 0.5rem;
+}
+
+button#settings-play-button {
+    padding: 1em 2em;
+    font-size: 1.7rem;
+}
+
+#notification-container {
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#game-history {
+    height: 40vh;
+    overflow-y: auto;
+}

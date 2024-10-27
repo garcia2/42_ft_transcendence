@@ -1,0 +1,14 @@
+<div id="game-container" class="d-flex justify-content-center align-items-center position-relative">
+    <div id="game-overlay" class="d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 id="game-title" class="text-uppercase text-neon-pink mb-3">Pong</h1>
+        <p id="start-text" class="text-neon-blue">Press Space to Start</p>
+        <p id="countdown-text" class="display-1 text-info" style="display: none;">3</p>
+    </div>
+
+    <div id="hud" class="position-absolute top-0 start-50 translate-middle-x bg-dark text-light p-2 m-2 rounded d-flex flex-column">
+        <span id="score">0 - 0</span>
+		<span id="score-limit"></span>
+	</div>
+    <div id="player-left-name" class="position-absolute top-0 start-0 bg-dark text-light p-2 m-2 rounded"></div>
+    <div id="player-right-name" class="position-absolute top-0 end-0 bg-dark text-light p-2 m-2 rounded"></div>
+</div>

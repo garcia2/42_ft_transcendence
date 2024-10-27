@@ -1,0 +1,12 @@
+Django==5.0.7
+pillow==10.4.0
+psycopg2-binary==2.9.9
+PyJWT==2.8.0
+sqlparse==0.5.1
+django-cors-headers
+asgiref==3.8.1
+requests
+uuid
+daphne
+channels
+

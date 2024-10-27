@@ -1,0 +1,53 @@
+<div id="account-card" class="card primary-background-color primary-text-color align-items-center p-4 w-25">
+
+	<div class="position-relative h-50 w-100" style="cursor: pointer;">
+		<img id="account-profile-picture" class="avatar border border-4 rounded-circle h-100 w-50" alt="profile-picture">
+		<input class="d-none" type="file" id="account-file-input" accept="image/*">
+
+		<div class="position-absolute top-0 start-50 translate-middle-x h-100 w-50 d-flex flex-column justify-content-center align-items-center bg-dark bg-opacity-50 rounded-circle text-white" style="opacity: 0; transition: opacity 0.3s;">
+			<i class="fas fa-camera fa-2x"></i>
+			<p class="mt-2 mb-0">Change picture</p>
+		</div>
+	</div>
+	<p class="invisible" id="profile-picture-feedback">Profile picture successfully updated</p>
+
+	<span class="card-title fs-1 pt-1" id=account-nickname></span>
+
+	<hr class="primary-border-color border border-2 opacity-75 w-75">	
+
+
+	<h2> Wins | Losses </h2>
+
+	<div class="progress-stacked progress-bar-height fw-bold w-100">	
+		<div id="account-wins-progress-bar" class="progress h-100" role="progressbar" aria-label="Segment one">
+			<div id="account-wins-count" class="progress-bar bg-success"></div>
+		</div>
+			
+		<div id="account-losses-progress-bar" class="progress h-100" role="progressbar" aria-label="Segment two">
+			<div id="account-losses-count" class="progress-bar bg-danger"></div>
+		</div>
+	</div>
+
+	<hr class="primary-border-color border border-2 opacity-75 w-75">
+
+	<h2> Game history </h2>
+
+	<div id="game-history"></div>
+
+	<div class="d-flex flex-column align-items-start fs-6 pt-5 w-100">
+		<h5>Settings :</h5>
+		<div id="tfa-auth" class="d-flex flex-column align-items-start fs-6 ps-4 pt-1 w-100">
+			<div class="fw-semibold pe-2">Two factor authentification: </div>
+			<div class="ps-2">
+				<span class="pe-1" id="tfa-account-mail">Disabled</span>
+				<a class="" id="tfa-account-activate" href="/tfa"> (enable) </a>
+				<a class="d-none" id="tfa-account-delete" href=""> (delete) </a>
+			</div>
+		</div>
+		<div class="d-flex flex-column align-items-start fs-6 ps-4 pt-2 w-100">
+			<div class="fw-semibold pe-2">Informations: </div>
+			<a id="update-info-nickname" class="ps-4" href="/updateNickname">Change nickname</a>
+			<a id="update-info-password" class="ps-4" href="/updatePassword">Change password</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<div id="friend-component" class="w-100">
+    <div id="friend-list" class="text-start pb-5"></div>
+    <div id="add-friend-form" class="input-group">
+        <input id="add-friend-input" type="text"
+               class="form-control"
+               placeholder="your friend nickname"
+               aria-label="your friend nickname"
+               aria-describedby="your friend nickname">
+
+        <button class="btn btn-outline-secondary"
+                type="button"
+                id="add-friend-button">
+            add friend
+        </button>
+    </div>
+    <div class="text-start pt-2">
+        <span id="no-user-found-error" class="fst-italic text-danger d-none">There is no user with this username</span>
+        <span id="no-self-friend-error" class="fst-italic text-danger d-none">You cannot befriend yourself</span>
+        <span id="already-friend-error" class="fst-italic text-danger d-none">This user is already your friend</span>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+from django.urls import path
+from users.views import (
+    register_user,
+    login_user,
+    list_users,
+    user_detail,
+    update_user,
+    delete_user,
+    add_friend,
+    remove_friend,
+    get_friends,
+    logout_user,
+    get_user_by_nickname,
+	get_token_bearer_info,
+    send_email_code,
+	validate_tfa_code,
+	register_or_login_with_ft,
+	finish_register_with_ft,
+)
+
+urlpatterns = [
+    path('register/', register_user, name='register_user'),
+    path('login/', login_user, name='login_user'),
+	path('me/', get_token_bearer_info, name='get_token_bearer_info'),
+    path('users/', list_users, name='list_users'),
+    path('<int:user_id>/', user_detail, name='user_detail'),
+    path('update/<int:user_id>/', update_user, name='update_user'),
+    path('delete/<int:user_id>/', delete_user, name='delete_user'),
+    path('friends/add/', add_friend, name='add_friend'),
+    path('friends/remove/', remove_friend, name='remove_friend'),
+    path('friends/get/', get_friends, name='get_friends'),
+    path('logout/', logout_user, name='logout_user'),
+    path('nickname/<str:nickname>/', get_user_by_nickname, name='get_user_by_nickname'),
+    path('send-tfa-mail/', send_email_code, name='send_email_code'),
+	path('validate-tfa-code/', validate_tfa_code, name="validate_tfa_code"),
+	path('register_or_login_with_ft/', register_or_login_with_ft, name="register_or_login_with_ft"),
+	path('finish_register_with_ft/', finish_register_with_ft, name="finish_register_with_ft"),
+]

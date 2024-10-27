@@ -1,0 +1,93 @@
+<div id="pong-settings-form" class="primary-background-color container-fluid w-25 pb-4 pt-4 rounded-3 shadow-lg">
+    <div class="row mb-4">
+        <h5 class="pt-2 fw-bold text-uppercase">Player size</h5>
+        <div class="d-flex justify-content-between">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-check d-none" type="radio" name="player-size" id="player-size-small" value="small">
+                <label class="form-check-label label-hover" for="player-size-small">SMALL</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-check d-none" type="radio" name="player-size" id="player-size-normal" value="normal" checked>
+                <label class="form-check-label label-hover" for="player-size-normal">NORMAL</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-check d-none" type="radio" name="player-size" id="player-size-tall" value="tall">
+                <label class="form-check-label label-hover" for="player-size-tall">TALL</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <h5 class="pt-2 fw-bold text-uppercase">Color Theme</h5>
+        <div class="d-flex justify-content-between">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-img-check d-none" type="radio" name="color-set" id="color-set-1" value="1" checked>
+                <label class="form-check-label" for="color-set-1">
+                    <img class="color-set-logo rounded-circle" src="../assets/colorSet1.png" alt="Color Set 1">
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-img-check d-none" type="radio" name="color-set" id="color-set-2" value="2">
+                <label class="form-check-label" for="color-set-2">
+                    <img class="color-set-logo rounded-circle" src="../assets/colorSet2.png" alt="Color Set 2">
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-img-check d-none" type="radio" name="color-set" id="color-set-3" value="3">
+                <label class="form-check-label" for="color-set-3">
+                    <img class="color-set-logo rounded-circle" src="../assets/colorSet3.png" alt="Color Set 3">
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <h5 class="pt-2 fw-bold text-uppercase">Ball Speed</h5>
+        <div class="d-flex justify-content-between">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-check d-none" type="radio" name="ball-speed" id="ball-speed-slow" value="slow">
+                <label class="form-check-label label-hover" for="ball-speed-slow">SLOW</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-check d-none" type="radio" name="ball-speed" id="ball-speed-normal" value="normal" checked>
+                <label class="form-check-label label-hover" for="ball-speed-normal">NORMAL</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-check d-none" type="radio" name="ball-speed" id="ball-speed-fast" value="fast">
+                <label class="form-check-label label-hover" for="ball-speed-fast">FAST</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <h5 class="pt-2 fw-bold text-uppercase">Increased ball speed on hit</h5>
+        <div class="d-flex justify-content-center">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-check d-none" type="radio" name="ball-speed-increase" id="ball-speed-increase-true" value="true">
+                <label class="form-check-label label-hover" for="ball-speed-increase-true">ON</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pong-check d-none" type="radio" name="ball-speed-increase" id="ball-speed-increase-false" value="false" checked>
+                <label class="form-check-label label-hover" for="ball-speed-increase-false">OFF</label>
+            </div>
+        </div>
+    </div>
+
+	<div class="row mb-4">
+		<h5 class="pt-2 fw-bold text-uppercase">Winning score</h5>
+		<div class="col-12 w-50 mx-auto">
+			<select id="score-dropdown" class="form-select rounded-pill shadow-sm">
+				<option value="1">1</option>
+				<option value="3" selected>3</option>
+				<option value="5">5</option>
+				<option value="7">7</option>
+				<option value="9">9</option>
+				<option value="11">11</option>
+			</select>
+		</div>
+	</div>
+	
+    <div class="row">
+        <button class="btn btn-primary w-75 mt-5 rounded-pill mx-auto display-4" id="settings-play-button">Play</button>
+    </div>
+</div>

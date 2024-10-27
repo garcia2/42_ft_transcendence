@@ -1,0 +1,33 @@
+<div id="login-div" class="d-flex flex-column h-100 w-25">
+	<form id="login-form" class="d-flex flex-column gap-3 w-100 pt-5">
+		<h4 id="register-success" class="d-none text-success text-start">
+			Registration successful
+		</h4>
+		<div class="form-floating">
+			<input type="text" autocomplete="off" id="login-nickname" class="form-control secondary-background-color default-text-color" placeholder="nickname">
+			<label for="login-nickname">Nickname</label>
+			<div class="invalid-feedback text-start" id="login-feedback"></div> 
+		</div>
+		<div class="form-floating">
+			<input type="password" id="login-password" class="form-control secondary-background-color default-text-color" placeholder="password">
+			<label for="login-password">Password</label>
+		</div>
+		<button type="submit" class="btn btn-primary h-100">Sign in</button>
+	</form>
+	<div id="connection-button" class="d-flex flex-column align-items-start p-2 w-100">
+		<a href="" id="login42">Connection by 42</a>
+	</div>
+</div>
+
+<div class="d-none d-flex flex-column align-items-start w-25 pt-5 gap-3" id="tfa-login-div">
+	<input class="btn btn-secondary" type="button" value="< Back" id="back-login-button">
+	<form id="tfa-login-form" class="d-flex flex-column align-items-start gap-3 w-100">
+		<div class="form-floating w-100">
+			<input type="text" autocomplete="off" id="tfa-login-code" class="form-control secondary-background-color default-text-color" placeholder="mail for two factor authentification">
+			<label for="tfa-login-code">Code for Two-Factor Authentication</label>
+			<div class="invalid-feedback text-start" id="tfa-login-feedback"></div>
+		</div> 
+		<button type="submit" class="btn btn-primary w-100 h-100">Sign in</button>
+	</form>
+	<a href="#" id="resend-login-code"> Resend code </a>
+</div>

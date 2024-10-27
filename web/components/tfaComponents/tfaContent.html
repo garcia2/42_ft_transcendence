@@ -1,0 +1,21 @@
+<form id="tfa-activate-form" class="d-flex flex-column gap-3 w-25 pt-5">
+	<div class="form-floating">
+		<input type="text" autocomplete="off" id="tfa-mail" class="form-control secondary-background-color default-text-color" placeholder="mail for two factor authentification">
+		<label for="tfa-mail">Mail for Two-Factor Authentification</label>
+		<div class="invalid-feedback text-start" id="tfa-mail-feedback"></div> 
+	</div>
+	<button id="activate-mail-button" type="submit" class="btn btn-primary h-100">Send mail</button>
+</form>
+
+<div class="d-none d-flex flex-column align-items-start w-25 pt-5 gap-3" id="tfa-confirm-div">
+	<input class="btn btn-secondary" type="button" value="< Back" id="back-tfa-button">
+	<form id="tfa-confirm-form" class="d-flex flex-column align-items-start gap-3 w-100">
+		<div class="form-floating w-100">
+			<input type="text" autocomplete="off" id="tfa-code" class="form-control secondary-background-color default-text-color" placeholder="mail for two factor authentification">
+			<label for="tfa-code">Code for Two-Factor Authentification</label>
+			<div class="invalid-feedback text-start" id="tfa-code-feedback"></div>
+		</div> 
+		<button id="activate-tfa-button" type="submit" class="btn btn-primary w-100 h-100">Activate TFA</button>
+	</form>
+	<a href="#" id="resend-tfa-code"> Resend code </a>
+</div>

@@ -1,0 +1,37 @@
+<div class="d-none w-100 text-danger" id="register-form-feedback"></div>
+<form class="d-flex flex-column gap-3 w-25 pt-5" id="register-form">
+	<div class="form-floating">
+		<input type="text" autocomplete="off" id="register-nickname" class="form-control secondary-background-color default-text-color" placeholder="nickname">
+		<label for="register-nickname">Nickname *</label>
+		<div class="invalid-feedback text-start" id="register-nickname-feedback">
+		</div>
+	</div>
+	<div class="form-floating">
+		<input type="password" id="register-password" class="form-control secondary-background-color default-text-color" placeholder="password">
+		<label for="register-password">Password *</label>
+		<div class="invalid-feedback text-start" id="register-password-feedback"></div>
+		<div id="password-rules" class="text-start">
+			<ul class="p-3 list-unstyled mb-0">
+				<li class=" border-start ps-1">At least 8 characters</li>
+				<li class=" border-start ps-1">At least one uppercase letter</li>
+				<li class=" border-start ps-1">At least one lowercase letter</li>
+				<li class=" border-start ps-1">At least one number</li>
+				<li class=" border-start ps-1">At least one special character</li>
+			</ul>
+		</div>
+	</div>
+	<div class="form-floating">
+		<input type="password" id="register-retype-password" class="form-control secondary-background-color default-text-color" placeholder="password">
+		<label for="register-retype-password">Confirm Password *</label>
+		<div class="invalid-feedback text-start" id="register-retype-password-feedback"></div>
+	</div>
+	<div class="mb-3 d-flex flex-column align-items-start w-100">
+		<label for="register-profile-picture" class="form-label">Profile Picture</label>
+		<input type="file" class="form-control secondary-background-color default-text-color" id="register-profile-picture" accept=".jpeg, .jpg, .png, .gif, .webp">
+		<div class="invalid-feedback text-start" id="profile-picture-feedback"></div>
+	</div>
+	<button type="submit" class="btn btn-primary w-100">Submit</button>
+</form>
+<div class="d-flex flex-column align-items-start p-2 w-25">
+	<a href="" id="login42">Connection by 42</a>
+</div>

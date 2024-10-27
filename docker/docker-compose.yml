@@ -1,0 +1,29 @@
+services:
+
+  caddy:
+    image: caddy:2.8
+    ports:
+      - "2000:80"
+      - "1500:443"
+    volumes:
+      - ../web:/web
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+
+  api:
+    build: ../api/app
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - ../.env.dev
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ../.env.dev
+
+volumes:
+  postgres_data:
